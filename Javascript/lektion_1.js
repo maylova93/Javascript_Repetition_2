@@ -2,6 +2,8 @@
  * LEKTION 1 - Variabler, events og conditionals    *
  ****************************************************/
 
+
+
 // Opgave 1
 // Du skal i denne opgave redegøre for forskellen mellem en let, var og const.
 // Det vil sige at du skal illustrere hvad der sker når man forsøger at ændre en

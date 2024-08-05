@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+}
+.container .box {
+  width: 50%;
+  height: 50%;
+}
+
+#errorMessage {
+  color: red;
+  display: none;
+}
