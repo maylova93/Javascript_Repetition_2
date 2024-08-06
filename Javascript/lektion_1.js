@@ -16,7 +16,7 @@
 // 992 + 237 = ?
 // 44 - 12 = ?
 // 142 * 23 = ?
-// 94 / 23  = ?
+// 94 / 23  = ?d
 // Svarene skal ligesom opgaven ovenfor vises i hver sin console.log
 //_______________________________________________________________________________
 
@@ -38,7 +38,7 @@
 //_________________________________________________________________________________
 
 // Opgave 6
-// I denne opgave skal du arbejde videre på input feltet fra opgave 5. Du skal nu tilføje følgende betingelser til valideringen.
+// I denne opgave skal du arbejde videre på input feltet fra opgave 4. Du skal nu tilføje følgende betingelser til valideringen.
 //  - Brugeren skal indtaste et stort bogstav.
 //  - Brugeren skal indtaste et tegn som ikke er et bogstav.
 //  - Brugeren må ikke indtaste en string som er længere end 20 karakterer.
