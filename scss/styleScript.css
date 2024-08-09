@@ -1,35 +1,147 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&display=swap" rel="stylesheet');
 body {
-  font-family: Arial, sans-serif;
-  background-color: #54a2ba;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8e1e7;
   padding: 20px;
+  color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+.navbar .nav-list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+.navbar .nav-list li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  font-size: 0.9em;
+  transition: color 0.3s;
+}
+.navbar .nav-list li a:hover {
+  color: #ff69b4;
+}
+.navbar .nav-icons {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+.navbar .nav-icons li a {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.navbar .nav-icons li a img {
+  width: 20px;
+  height: 20px;
+  filter: invert(0.7);
+}
+.navbar .nav-icons li a .cart-count {
+  position: absolute;
+  background-color: #ff69b4;
+  color: #fff;
+  top: -5px;
+  right: -10px;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.7em;
+  font-weight: bold;
+}
+
+header {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+header .title {
+  margin: 0 0 20px;
+  font-size: 3em;
+  color: #ff69b4;
+}
+header form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+header form label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+header form input, header form select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-right: 10px;
+  flex: 1;
+  max-width: 200px;
+}
+header form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #add8e6;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+header form button:hover {
+  background-color: #86c5da;
 }
 
 .product-container {
+  font-family: "Frank Ruhl Libre";
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 15px;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 20px;
 }
 
 .product {
+  font-family: "Frank Ruhl Libre";
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 15px;
   text-align: center;
-  transition: transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 .product:hover {
   transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 .product img {
   width: 100px;
+  height: auto;
   border-bottom: 1px solid #ddd;
   margin-bottom: 16px;
 }
 .product h2 {
   font-size: 1.2em;
   margin: 0.5em 0;
+  color: #ff69b4;
 }
 .product p {
   margin: 0.5em 0;
@@ -37,4 +149,186 @@ body {
 }
 .product p:nth-of-type(1) {
   font-weight: bold;
+}
+.product .button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #add8e6;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+.product .button:hover {
+  background-color: #86c5da;
+}
+
+footer {
+  background-color: #111;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+  font-size: 0.9em;
+}
+footer .newsletter-signup p {
+  color: #ff69b4;
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+footer .newsletter-signup .hashtag {
+  color: #c60081;
+}
+footer .newsletter-signup form {
+  margin: 20px 0;
+}
+footer .newsletter-signup form input[type=email] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 250px;
+  margin-right: 10px;
+  font-size: 1em;
+}
+footer .newsletter-signup form .button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff69b4;
+  color: #111;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+footer .newsletter-signup form .button:hover {
+  background-color: #555;
+}
+footer .newsletter-signup .social-media {
+  margin: top 20px;
+}
+footer .newsletter-signup .social-media a {
+  margin: 0 5px;
+  display: inline-block;
+}
+footer .newsletter-signup .social-media img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+}
+footer p {
+  margin-top: 40px;
+  font-size: 0.8em;
+  color: #777;
+}
+footer .error-message {
+  color: #ff3333;
+  margin-top: 10px;
+  font-size: 0.9em;
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  header {
+    padding: 15px;
+  }
+  header .title {
+    font-size: 2.5em;
+  }
+  header form {
+    flex-direction: column;
+    align-items: center;
+  }
+  header form input, header form select {
+    max-width: 100%;
+    margin-right: 0;
+  }
+  header form button {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 200px;
+  }
+  .product-container {
+    grid-template-columns: 1fr;
+  }
+  .product {
+    padding: 10px;
+  }
+  .product img {
+    width: 80px;
+  }
+  .product h2 {
+    font-size: 1em;
+  }
+  .product .button {
+    width: 100%;
+    max-width: 150px;
+  }
+  footer {
+    padding: 8px;
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+  .navbar .nav-list {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .navbar .nav-icons {
+    margin-top: 10px;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .navbar .burger-menu {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  .navbar .burger-menu:before {
+    content: "☰";
+    font-size: 1.5em;
+  }
+  .navbar.active .nav-list {
+    display: flex;
+  }
+  footer {
+    padding: 15px;
+    font-size: 0.8em;
+  }
+  footer .newsletter-signup form {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .newsletter-signup form input[type=email] {
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 300px;
+  }
+  footer .newsletter-signup form .button {
+    width: 100%;
+    max-width: 300px;
+  }
+  footer .social-media {
+    margin-top: 20px;
+  }
+  footer .social-media a {
+    margin: 0 10px;
+  }
 }
